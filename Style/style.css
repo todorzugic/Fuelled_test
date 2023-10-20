@@ -1,0 +1,856 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+/* Style the header */
+header {
+    width: 100%;
+    z-index:9999;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 45px 0px;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Style the navigation bar */
+nav {
+    background-color: none;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Style the navbar list items */
+nav ul {
+    list-style: none;
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li {
+    padding: 18px;
+}
+
+/* Style the links within the navbar */
+nav a {
+    text-decoration: none;
+    color: white;
+    list-style-position: outside;
+    list-style-type: none;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+}
+
+/* Style for the links on hover */
+nav a:hover {
+    color: lightgrey;
+}
+
+
+/* Style for the svg logo */
+header svg {
+    fill: white;
+    margin-left: 80px;
+}
+
+.moved {
+    animation: moveUp 0.5s ease forwards;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    100% {
+        transform: translateY(-40px) translateX(-75px);
+    }
+}
+
+.movedRight {
+    animation: moveRight 0.5s ease forwards;
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    100% {
+        transform: translateY(-40px) translateX(60px);
+    }
+}
+
+.moveBack1 {
+    animation: moveBackRight 0.5s ease forwards;
+
+}
+
+.moveBack2 {
+    animation: moveBackLeft 0.5s ease forwards;
+
+}
+
+@keyframes moveBackRight {
+    0% {
+        transform: translateY(-40px) translateX(-75px);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+
+@keyframes moveBackLeft {
+    0% {
+        transform: translateY(-40px) translateX(60px);
+    }
+    100% {
+        transform: translateY(0) translateX(60);
+    }
+}
+/* CSS to style the red border square */
+.red-square {
+    width: 430px;
+    height: 430px;
+    border: 8px solid #ae0000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@font-face {
+    font-family: 'Allstar4';
+    src: url('/Public/Fonts/Allstar4.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.square-text {
+    font-size: 90px;
+    font-family: 'Allstar4', Impact, sans-serif;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    letter-spacing: 2px;
+    line-height: 2.5;
+    transform: translate(-50%, -50%); 
+    white-space: nowrap;
+    color: white;
+    background: transparent;
+    padding: 20px;
+}
+
+    
+/* Footer styles */
+footer {
+    font-family:Impact, sans-serif;
+    letter-spacing: 1px;
+    font-size: 23px;
+    padding: 20px;
+    padding-bottom: 80px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.5;
+    white-space: nowrap;
+}  
+
+.page1 {
+    height: 100vh;
+    display: block;
+    color: white;
+    background-color: #181818;
+}
+
+.page2 {
+    height: 100vh;
+    display: block;
+    background-color: #385cd4;
+    display: none;
+}
+
+.secondBackground {
+    width: 450px;
+    height: 510px;
+    background-image: url(../Public/Page2/background2.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.secondBackground-text {
+    font-size: 100px;
+    font-family: 'Allstar4', Impact, sans-serif;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    line-height: 2.5;
+    transform: translate(-50%, -50%); 
+    white-space: nowrap;
+    color: white;   
+    background: transparent;
+    padding: 20px;
+    text-shadow: 8px -4px 16px rgba(2, 32, 133, 0.6); /* Add shadow effect here */
+}
+
+.NewYork-text {
+    fill: white;
+    position: absolute;
+    top: 83%;
+    left: 37%;
+}
+
+.Wirecutter-logo {
+    position: absolute;
+    top: 82%;
+    left: 50%;   
+}
+
+.Web-Strategy-list {
+    color: lightgrey;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 90%;
+    left: 46%;
+}
+
+.Web-Strategy-list ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.Web-Strategy-list li {
+    margin: 5px;
+    position: relative;
+    font-size: 15px;
+    font-family: 'Allstar4', sans-serif;
+}
+
+.Web-Strategy-list li:not(.with-dot)::before {
+    content: "•"; /* Add the dot as content */
+    margin-right: 15px; /* Adjust the spacing between the dot and the text */
+}
+
+.page3 {
+    height: 100vh;
+    display: block;
+    background-image: url(../Public/Page3/bg-apple.0ad1a9028.jpg);
+    background-size: cover;
+    background-position: center;
+    display: none;
+
+}
+
+.MiddleSquare {
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../Public/Page3/3e90fca4-ac18-4432-8e38-783a55fbd47a.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.Apple-logo {
+    fill: white;
+    position: absolute;
+    top: 80%;
+    left: 48%;
+}
+
+.page4 {
+    height: 100vh;
+    display: block;
+    background-color: #08a4e4;
+    display: none;
+}
+
+.fourth-square {
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../Public/Page4/4ef3ed6b-48e8-4d48-b7c0-38899c34efea.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.Parker-logo {
+    fill: white;
+    position: absolute;
+    top: 85%;
+    left: 43.5%;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+#scrollPath {
+    margin-top: 125px;
+    margin-right: 20px;
+    position: fixed;
+    top: 0;
+    right: 10px;
+    width: 10.5px;
+    height: 70%;
+    background: rgba(255,255,255, 0.5);
+}
+
+#progressbar {
+    margin-top: 125px;
+    margin-right: 20px;
+    position: fixed;
+    top: 0;
+    right: 10px;
+    width: 10.5px;
+    background: #f5f5f1;
+    /*background: linear-gradient(to top, #008aff, #00ffe7);*/
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate
+{
+    0%,100%
+    {
+        filter: hue-rotate(0deg);
+    }
+    50%
+    {
+        filter: hue-rotate(360deg);
+    }
+}
+/*
+#progressbar::before
+{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 80%;
+    height: 40%;
+    background: #f5f5f1;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(30px); 
+}
+
+#progressbar::after
+{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 80%;
+    height: 40%;
+    background: #f5f5f1;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(30px); 
+}
+
+*/
+.page5 {
+    height: 100vh;
+    display: block;
+    background-image: url(../Public/Page5/bg-mgm.0204c1677.jpg);
+    background-size: wrap;
+    display: none;
+    background-position: center;
+}
+
+.fifth-square {
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../Public/Page5/sq-mgm.c78e2c39d.png);
+    border: 0.5px solid black;
+    background-size: cover;
+    background-position: center;   
+}
+
+.lion-logo {
+    fill: white;
+    position: absolute;
+    top: 83%;
+    left: 44%; 
+}
+
+.page6 {
+    height: 100vh;
+    display: block;
+    display: none;
+    background: linear-gradient(to bottom, #cc1434, #b30e33);
+}
+
+.sixth-square {
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../Public/Page6/sq-riteaid.32080edeb.png);
+    background-size: cover;
+    background-position: center;  
+}
+
+.RiteAid-logo {
+    fill: white;
+    position: absolute;
+    top: 80%;
+    left: 48%;
+}
+
+.page7 {
+    height: 100vh;
+    display: block;
+    display: none;
+    background: linear-gradient(to bottom right, #b3cfdf, #e2e5ed, #c8d0ec);
+}
+
+.seventh-square {
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../Public/Page7/sq-crunch.faf1ef682.png);
+    background-size: cover;
+    background-position: center;  
+}
+
+.Crunchbase-logo {
+    fill: white;
+    position: absolute;
+    top: 75%;
+    left: 44%;  
+}
+
+.page8 {
+    background-color: #181414;
+    height: 200vh;
+    display: none;
+}
+
+.step {
+    display: grid;
+    grid-gap: 5%;
+    grid-template-columns: 20% 65%;
+    justify-content: center;
+    margin-top: 5%;
+    opacity: 1;
+    width: 65%;
+    z-index: 3;
+}
+
+.step-number {
+    color: #4d4d4c;
+    font-size: 12.5rem;
+    font-weight: 100;
+    font-family: 'Allstar4', Impact, sans-serif;
+    margin: 0;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.step-body {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+.step-title {
+    font-size: 90px;
+    font-family: 'Allstar4', Impact, sans-serif;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.step-description {
+    font-size: 1.5rem;
+    font-family: 'Allstar4', Impact, sans-serif;
+    letter-spacing: 2px;
+    color: white;
+    display: block;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+    max-width: 42em;
+}
+
+.page9 {
+    height: 100vh;
+    display: block;
+    background-image: url(../Public/Page9/press-bg.717c52b02.jpg);
+    background-size: wrap;
+    display: none;
+    background-position: center;   
+}
+
+.ninth-square {
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../Public/Page9/press-sq.6eac04f3e.png);
+    background-size: cover;
+    background-position: center;  
+}
+
+.page10 {
+    height: 100vh;
+    display: block;
+    background-image: url(../Public/Page10/invest-bg.5b1204678.jpg);
+    background-size: cover;
+    display: none;
+    background-position: center;     
+}
+
+.tenth-square {
+    width: 380px;
+    height: 900px;
+    position: absolute;
+    top: 5%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    transform: scale(1.1);
+    background-image: url(../Public/Page10/invest-sq.af6b47ab1.png);
+    background-size: contain;
+    background-position: center;      
+}
+
+.page11 {
+    height: 100vh;
+    display: block;
+    display: none;
+    top: 100%;
+    background-attachment: fixed;
+    background: linear-gradient(to right, #ae0000 0%, #ae0000 60%, #950000 60%, #950000 100%);
+}
+
+.LastText {
+    font-size: 30px;
+    font-family: 'Allstar4', Impact, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    letter-spacing: 2px;
+    line-height: 2.5;
+    transform: translate(-50%, -50%); 
+    white-space: nowrap;
+    color: white;
+    background: transparent;
+    padding: 20px;  
+}
+
+.LastPage-list {
+    position: absolute;
+    color: white;
+    font-family: Arial , Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    top: 13%;
+    left: 63%;
+}
+
+.LastPage-list ul {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
+}
+
+.LastPage-list-second {
+    position: absolute;
+    color: white;
+    font-family: Arial , Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+    top: 13%;
+    left: 80%;
+}
+
+.LastPage-list-second ul {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
+}
+
+.LastPage-list-footer {
+    position: absolute;
+    color: lightgrey;
+    font-family: Arial , Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    top: 81%;
+    left: 63%;   
+}
+
+.LastPage-list-footer ul {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
+}
+
+a {
+    text-decoration: none;
+    color: lightgrey;
+}
+
+.LastPage-list-second li a {
+    color: white;
+    text-decoration: none; /* Remove text decorations like underlines */
+    transition: color 0.3s; /* Add a smooth color transition */
+}
+  
+  /* Change the text color to light grey on hover for links within list items */
+.LastPage-list-second li a:hover {
+    color: lightgrey;
+}
+
+.LastPage-list li a {
+    color: white;
+    text-decoration: none; /* Remove text decorations like underlines */
+    transition: color 0.3s; /* Add a smooth color transition */
+}
+  
+  /* Change the text color to light grey on hover for links within list items */
+.LastPage-list li a:hover {
+    color: lightgrey;
+}
+
+.Privacy-list {
+    position: absolute;
+    color: white;
+    left: 63%;
+    top: 92%;
+    display: flex; /* Display the list items horizontally */
+    align-items: center; /* Vertically center the items */
+}
+
+.Privacy-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display list items horizontally */
+    align-items: center; /* Vertically center the items */
+}
+
+.Privacy-list li {
+    display: flex; /* Display list items horizontally */
+    align-items: center; /* Vertically center the items */
+    margin-right: 10px; /* Adjust spacing between items */
+    color: lightgrey;
+    text-decoration: underline;
+}
+
+.Privacy-list li:not(:last-child)::after {
+    content: "•"; /* Add a bullet (dot) after each list item except the last one */
+    margin-left: 10px; /* Adjust spacing between the bullet and the text */
+    text-decoration: none;
+}
+
+.fade-in-from-below {
+    opacity: 0;
+    margin-top: 20px; /* Initial position below */
+    animation: fadeInFromBelow 2s ease forwards;
+}
+
+@keyframes fadeInFromBelow {
+    from {
+        opacity: 0;
+        margin-top: 20px; /* Start position below */
+    }
+    to {
+        opacity: 1;
+        margin-top: 0; /* End position (normal) */
+    }
+}
+
+.fade-in-from-below-fast {
+    opacity: 0;
+    margin-top: 20px; /* Initial position below */
+    animation: fadeInFromBelow-fast 1s ease forwards;
+}
+
+@keyframes fadeInFromBelow-fast {
+    from {
+        opacity: 0;
+        margin-top: 20px; /* Start position below */
+    }
+    to {
+        opacity: 1;
+        margin-top: 0; /* End position (normal) */
+    }
+}
+
+.fade-in-background {
+    opacity: 0;
+    animation: fadeInBackground 0.5s ease forwards;
+}
+
+@keyframes fadeInBackground {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.fade-out-to-top {
+    opacity: 1;
+    margin-top: 0; /* Initial position (normal) */
+    animation: fadeOutToTop 1s ease forwards;
+}
+
+@keyframes fadeOutToTop {
+    from {
+        opacity: 1;
+        margin-top: 0; /* Start position (normal) */
+    }
+    to {
+        opacity: 0;
+        margin-top: -20px; /* End position above */
+    }
+}
+
+.animated-list {
+    list-style: none;
+    padding: 0;
+}
+
+.animated-list li {
+    opacity: 0;
+    animation: flipIn 0.5s ease forwards;
+}
+
+@keyframes flipIn {
+    0% {
+        opacity: 0;
+        transform: perspective(400px) rotateX(90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: perspective(400px) rotateX(0);
+    }
+}
+
+.animated-list li:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.animated-list li:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.animated-list li:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.animated-list li:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.animated-list li:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.parallax-container {
+    display: flex;
+    overflow: hidden;
+    height: 200%; /* Twice the viewport height to accommodate two pages */
+    background-size: 100% 200%; /* Adjust to twice the container height */
+    transition: background-position 0.5s;
+}
+
+.button-class {
+    top: 86%;
+    left: 41.5%;
+    position: absolute
+}
+
+.custom-button {
+    background-color: transparent;
+    border: 2px solid #ffffff; /* White border */
+    color: #ffffff; /* Text color */
+    padding: 22px 32px; /* Larger padding for a bigger button */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center;
+    font-size: 18px; /* Larger font size */
+    position: relative; /* Create a positioning context for the arrow */
+}
+  
+.button-arrow {
+    opacity: 0; /* Initially hidden */
+    position: absolute;
+    right: 10px; /* Adjust the position as needed */
+    transition: opacity 0.3s ease;
+}
+  
+.custom-button:hover {
+    border: 2px solid #ffffff; /* Border remains white on hover */
+    color: #ffffff; /* Text color on hover */
+}
+  
+.custom-button:hover .button-text {
+    transform: translateX(-10px); /* Shift text to the left on hover */
+}
+  
+.custom-button:hover .button-arrow {
+    opacity: 1; /* Show arrow on hover */
+}
+
+.chat-hover .button-arrow {
+    position: absolute;
+    margin-left: 8%;
+    opacity: 0; /* Initially hidden */
+    left: 300px; /* Start off-screen to the left */
+    top: 20%;
+    transition: opacity 0.3s, left 0.3s; /* Apply transition to opacity and left */
+}
+
+.chat-hover:hover .button-arrow {
+    opacity: 1; /* Make the arrow visible on hover */
+    left: 90%; /* Move the arrow to its final position (right) */
+}
